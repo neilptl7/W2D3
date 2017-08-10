@@ -1,10 +1,14 @@
 class Card
 
-  card_suits = {
-    :heart => "♥",
-    :spades => "♠",
-    :diamonds => "♦",
-    :clover => "♣"
+  attr_reader :suit, :value
+
+
+
+  CARD_SUITS = {
+    :heart => "&hearts;",
+    :spades => "&spades;",
+    :diamonds => "&diams;",
+    :clover => "&clubs;"
   }
 
   def initialize(suit, value)
@@ -13,7 +17,7 @@ class Card
   end
 
   def to_s
-    "#{card_suits[suit]} /n #{value}"
+    "#{CARD_SUITS[@suit]} /n #{@value}"
   end
 
 end
